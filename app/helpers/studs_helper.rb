@@ -1,0 +1,2 @@
+module StudsHelper
+end

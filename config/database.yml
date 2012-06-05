@@ -4,10 +4,7 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-<<<<<<< HEAD
 #  adapter: mysql2
-=======
->>>>>>> d484d8a927b221fd60b255059952f676e288be19
   adapter: sqlite3
   database: student_development
   user: root
