@@ -17,7 +17,11 @@ group :assets do
 end
 
 group :development do
+<<<<<<< HEAD
 #  gem 'mysql2', :git => 'git://github.com/brianmario/mysql2.git'
+=======
+  #gem 'mysql2', :git => 'git://github.com/brianmario/mysql2.git'
+>>>>>>> d484d8a927b221fd60b255059952f676e288be19
   gem 'sqlite3'
   gem 'execjs'
   gem "heroku"
