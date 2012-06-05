@@ -17,14 +17,15 @@ group :assets do
 end
 
 group :development do
-  gem 'mysql2', :git => 'git://github.com/brianmario/mysql2.git'
+  #gem 'mysql2', :git => 'git://github.com/brianmario/mysql2.git'
+  gem 'sqlite3'
   gem 'execjs'
   gem "heroku"
   gem "taps", "~> 0.3.23"
 end
 
 group :production do
-  gem 'pg'
+  #gem 'pg'
 end
 
 gem "devise", ">= 1.5.0"
