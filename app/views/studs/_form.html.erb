@@ -6,6 +6,11 @@
 </div>
 
 <div>
+<%#= f.label :grade_id %><br />
+<%#= collection_select(:stud, :grade_id, Grade.all, :id, :lettergrade) %>
+</div>
+
+<div>
 	<%= f.submit 'Submit' %>
 </div>
 
