@@ -1,0 +1,9 @@
+<div><%= notice %></div>
+<div><b>ID:</b><%= @grade.id %></div>
+
+<div><b>Name:</b><%= @grade.lettergrade %></div>
+
+<div>
+<%= link_to 'Edit', edit_grade_path(@grade) %> | 
+<%= link_to 'Back', grades_path %>
+</div>

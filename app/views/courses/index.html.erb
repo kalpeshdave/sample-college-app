@@ -1,0 +1,11 @@
+<%= link_to 'Create New Course', new_course_path %>
+
+<% @courses.each do |course| %>
+<div>
+	<%= course.id %> <%= course.number %> <%= course.name %> <%= course.description %>
+	<%= link_to 'View', course%>
+	<%= link_to 'Edit', edit_course_path(course) %>
+	<%= link_to 'Delete', course, confirm: 'Are you sure?', method: :delete %>
+</div>
+
+<% end %>

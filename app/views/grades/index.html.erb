@@ -1,0 +1,11 @@
+<%= link_to 'Create New Grade', new_grade_path %>
+
+<% @grades.each do |grade| %>
+<div>
+	<%= grade.id %> <%= grade.lettergrade %>
+	<%= link_to 'View', grade%>
+	<%= link_to 'Edit', edit_grade_path(grade) %>
+	<%= link_to 'Delete', grade, confirm: 'Are you sure?', method: :delete %>
+</div>
+
+<% end %>

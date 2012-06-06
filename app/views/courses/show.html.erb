@@ -1,0 +1,10 @@
+<div><%= notice %></div>
+<div><b>ID:</b><%= @course.id %></div>
+<div><b>Number:</b><%= @course.number %></div>
+<div><b>Name:</b><%= @course.name %></div>
+<div><b>Description:</b><%= @course.description %></div>
+
+<div>
+<%= link_to 'Edit', edit_course_path(@course) %> | 
+<%= link_to 'Back', courses_path %>
+</div>
