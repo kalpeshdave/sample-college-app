@@ -1,1 +1,11 @@
-<%= @welcome %>
+<%= link_to 'Create New Student', new_stud_path %>
+
+<% @studs.each do |stud| %>
+<div>
+	<%= stud.id %> <%= stud.name %>
+	<%= link_to 'View', stud%>
+	<%= link_to 'Edit', edit_stud_path(stud) %>
+	<%= link_to 'Delete', stud, confirm: 'Are you sure?', method: :delete %>
+</div>
+
+<% end %>
