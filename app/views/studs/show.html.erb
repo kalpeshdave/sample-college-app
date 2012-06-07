@@ -1,7 +1,36 @@
 <div><%= notice %></div>
 <div><b>ID:</b><%= @stud.id %></div>
-
 <div><b>Name:</b><%= @stud.name %></div>
+
+<div><b>Grades:</b>
+<% @grades.each do |grade| %>
+	<%= grade.lettergrade %>
+	<%
+		if grade.lettergrade == "A"
+			@scale = '4'
+		elsif grade.lettergrade == "B"
+			@scale = '3'
+		elsif grade.lettergrade == "C"	
+			@scale = '2'
+		elsif grade.lettergrade == "D"	
+			@scale = '1'
+		else
+			@scale = '0'
+		end
+	%>
+	(<%= @scale %>)
+<% end %>
+</div>
+
+<div><b>Courses:</b>
+<% @grades.each do |grade| %>
+	<%
+		@course = grade.course_id
+		@courseinfo = Course.find(@course)
+	%>
+		<%= @courseinfo.name%> (<%= @courseinfo.number %>)
+<% end %>
+</div>
 
 <div>
 <%= link_to 'Edit', edit_stud_path(@stud) %> | 

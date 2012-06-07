@@ -36,5 +36,7 @@ class GradesController < ApplicationController
 
 	def show
 		@grade = Grade.find(params[:id])
+		@stud = Stud.find(@grade.stud_id)
+		@course = Course.find(@grade.course_id)
 	end
 end

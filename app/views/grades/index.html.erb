@@ -1,8 +1,24 @@
 <%= link_to 'Create New Grade', new_grade_path %>
 
 <% @grades.each do |grade| %>
+<% 
+	@stud = grade.stud_id
+        @course = grade.course_id
+        if @stud
+           @studinfo = Stud.find(@stud)
+        end
+        if @course
+           @courseinfo = Course.find(@course)
+        end
+%>
 <div>
 	<%= grade.id %> <%= grade.lettergrade %>
+	<% if @stud %>
+        	<%= @studinfo.name %>
+        <% end %>
+	<% if @course %>
+        	<%= @courseinfo.name %>
+        <% end %>
 	<%= link_to 'View', grade%>
 	<%= link_to 'Edit', edit_grade_path(grade) %>
 	<%= link_to 'Delete', grade, confirm: 'Are you sure?', method: :delete %>

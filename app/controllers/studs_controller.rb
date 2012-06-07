@@ -36,5 +36,6 @@ class StudsController < ApplicationController
 
 	def show
 		@stud = Stud.find(params[:id])
+		@grades = Grade.where(:stud_id => @stud.id)
 	end
 end
